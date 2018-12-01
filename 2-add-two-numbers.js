@@ -1,4 +1,11 @@
 /**
+ * Time: O(max(n, m))
+ * Space: O(max(n, m))
+ * n - # of nodes in l1
+ * m - # of nodes in l2
+ */
+
+/**
  * Definition for singly-linked list.
  * function ListNode(val) {
  *     this.val = val;
