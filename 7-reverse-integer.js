@@ -1,4 +1,10 @@
 /**
+ * Time: O(n)
+ * Space: O(1)
+ * n - # of digits in x
+ */
+
+/**
  * @param {number} x
  * @return {number}
  */
