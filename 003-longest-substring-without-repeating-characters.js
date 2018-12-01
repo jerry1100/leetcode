@@ -1,7 +1,7 @@
 /**
  * Time: O(n)
  * Space: O(n)
- * s - length of string
+ * n - length of string
  */
 
 /**
