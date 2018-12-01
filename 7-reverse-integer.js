@@ -3,20 +3,18 @@
  * @return {number}
  */
 function reverse(x) {
-  const isNegative = x < 0;
-  const stringified = Math.abs(x).toString();
-  let reversed = '';
+  let reversed = 0;
 
-  // Reverse the string
-  for (let i = stringified.length - 1; i >= 0; i--) {
-    reversed += stringified.charAt(i);
+  // Reverse the digits
+  while (x) {
+    reversed = (reversed * 10) + (x % 10);
+    x = Math.trunc(x / 10);
   }
 
   // Check for overflow
-  const limit = isNegative ? Math.pow(2, 31) : Math.pow(2, 31) - 1;
-  if (Number(reversed) > limit) {
+  if (reversed < -Math.pow(2, 31) || reversed > Math.pow(2, 31) - 1) {
     return 0;
   }
 
-  return isNegative ? `-${reversed}` : reversed;
+  return reversed;
 };
