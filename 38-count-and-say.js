@@ -1,4 +1,11 @@
 /**
+ * Time: O(n*m)
+ * Space: O(1)
+ * n - nth term
+ * m - longest possible sequence for a term
+ */
+
+/**
  * @param {number} n
  * @return {string}
  */
