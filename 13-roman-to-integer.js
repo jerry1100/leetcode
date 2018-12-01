@@ -1,4 +1,10 @@
 /**
+ * Time: O(n)
+ * Space: O(1)
+ * n - # of chars in s
+ */
+
+/**
  * @param {string} s
  * @return {number}
  */
