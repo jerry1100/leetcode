@@ -1,7 +1,7 @@
 /**
  * Time: O(n)
  * Space: O(n)
- * n - # of integers
+ * n - # of elements in nums
  */
 
 /**
