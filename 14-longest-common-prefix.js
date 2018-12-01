@@ -1,6 +1,6 @@
 /**
  * Time: O(n*m)
- * Space: O(1)
+ * Space: O(m)
  * n - # of strings
  * m - # of chars in shortest string
  */
