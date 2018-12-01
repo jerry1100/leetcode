@@ -1,4 +1,10 @@
 /**
+ * Time: O(n)
+ * Space: O(n)
+ * n - # of integers
+ */
+
+/**
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
