@@ -1,4 +1,10 @@
 /**
+ * Time: O(n)
+ * Space: O(1)
+ * n - # of elements in digits
+ */
+
+/**
  * @param {number[]} digits
  * @return {number[]}
  */
