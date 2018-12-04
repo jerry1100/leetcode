@@ -9,17 +9,21 @@
  * @return {number}
  */
 function reverse(x) {
+  const INT_MAX = Math.pow(2, 31) - 1;
+  const INT_MIN = -Math.pow(2, 31);
   let reversed = 0;
 
   // Reverse the digits
   while (x) {
-    reversed = (reversed * 10) + (x % 10);
-    x = Math.trunc(x / 10);
-  }
+    const digit = x % 10;
 
-  // Check for overflow
-  if (reversed < -Math.pow(2, 31) || reversed > Math.pow(2, 31) - 1) {
-    return 0;
+    // Check for overflow before adding
+    if (reversed > (INT_MAX - digit) / 10 || reversed < (INT_MIN - digit) / 10) {
+      return 0;
+    }
+
+    reversed = reversed * 10 + digit;
+    x = Math.trunc(x / 10);
   }
 
   return reversed;
