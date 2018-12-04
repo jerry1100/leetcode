@@ -17,7 +17,7 @@ function reverse(x) {
   while (x) {
     const digit = x % 10;
 
-    // Check for overflow before adding
+    // Check for overflow
     if (reversed > (INT_MAX - digit) / 10 || reversed < (INT_MIN - digit) / 10) {
       return 0;
     }
