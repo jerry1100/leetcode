@@ -17,7 +17,7 @@ function strStr(haystack, needle) {
 
   // Look for the needle at each position
   for (let i = 0; i < haystack.length - needle.length + 1; i++) {
-    if (haystack.substr(i, needle.length) === needle) {
+    if (haystack.slice(i, i + needle.length) === needle) {
       return i;
     }
   }
