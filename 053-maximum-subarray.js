@@ -25,4 +25,4 @@ function maxSubArray(nums) {
   }
 
   return max;
-};
+}

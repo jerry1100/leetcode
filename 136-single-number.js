@@ -10,4 +10,4 @@
  */
 function singleNumber(nums) {
   return nums.reduce((total, current) => total^current);
-};
+}

@@ -32,4 +32,4 @@ function longestCommonPrefix(strs) {
   };
 
   return lcpAtIndex(0);
-};
+}

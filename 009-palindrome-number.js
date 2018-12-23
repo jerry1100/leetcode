@@ -23,4 +23,4 @@ function isPalindrome(x) {
   }
 
   return reversed === original;
-};
+}

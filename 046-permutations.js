@@ -29,4 +29,4 @@ function permute(nums) {
 
   getPermutations([]);
   return permutations;
-};
+}

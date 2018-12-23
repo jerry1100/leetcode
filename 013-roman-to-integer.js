@@ -26,4 +26,4 @@ function romanToInt(s) {
   }
 
   return sum;
-};
+}

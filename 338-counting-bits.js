@@ -20,4 +20,4 @@ function countBits(num) {
     bits[i] = bits[i - nextPowerOf2 / 2] + 1;
   }
   return bits;
-};
+}

@@ -12,4 +12,4 @@ function addDigits(num) {
     return 0;
   }
   return num % 9 || 9; // pattern goes 1-9 then repeats
-};
+}

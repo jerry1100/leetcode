@@ -26,4 +26,4 @@ function compareVersion(version1, version2) {
   }
 
   return 0;
-};
+}

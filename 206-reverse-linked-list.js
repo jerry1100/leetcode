@@ -27,4 +27,4 @@ function reverseList(head) {
   }
 
   return prev;
-};
+}

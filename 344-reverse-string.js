@@ -16,4 +16,4 @@ function reverseString(s) {
   }
 
   return reversed;
-};
+}

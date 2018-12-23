@@ -20,4 +20,4 @@ function isHappy(n) {
   }
 
   return false;
-};
+}

@@ -40,4 +40,4 @@ function solveNQueens(n) {
   return solutions.map(solution =>
     solution.map(col => '.'.repeat(col) + 'Q' + '.'.repeat(n - col - 1))
   );
-};
+}

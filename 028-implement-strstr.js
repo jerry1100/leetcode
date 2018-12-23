@@ -23,4 +23,4 @@ function strStr(haystack, needle) {
   }
 
   return -1;
-};
+}

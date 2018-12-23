@@ -17,4 +17,4 @@ function getSum(a, b) {
   }
 
   return getSum(sum, carry);
-};
+}

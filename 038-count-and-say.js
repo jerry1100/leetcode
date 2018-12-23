@@ -14,7 +14,7 @@ function countAndSay(n) {
     return '1';
   }
   return getSequence(countAndSay(n - 1));
-};
+}
 
 // Get current sequence from previous sequence
 function getSequence(prevSequence) {

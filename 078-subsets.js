@@ -23,4 +23,4 @@ function subsets(nums) {
 
   getSubset([], 0);
   return powerSet;
-};
+}

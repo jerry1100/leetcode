@@ -12,4 +12,4 @@ function isPowerOfTwo(n) {
     return false;
   }
   return (n & (n - 1)) === 0; // 0b1000 & 0b0111 === 0b0000
-};
+}

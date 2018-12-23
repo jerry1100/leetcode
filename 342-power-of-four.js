@@ -23,4 +23,4 @@ function isPowerOfFour(num) {
   }
 
   return true;
-};
+}

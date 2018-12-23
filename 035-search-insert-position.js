@@ -29,4 +29,4 @@ function searchInsert(nums, target) {
   //   if target < num, then pos = left = right + 1
   //   if target > num, then pos = right + 1
   return right + 1;
-};
+}

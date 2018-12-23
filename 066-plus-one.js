@@ -23,4 +23,4 @@ function plusOne(digits) {
   }
 
   return digits;
-};
+}

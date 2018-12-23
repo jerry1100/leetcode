@@ -21,4 +21,4 @@ function twoSum(nums, target) {
 
     map.set(nums[i], i);
   }
-};
+}

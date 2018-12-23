@@ -39,4 +39,4 @@ function letterCombinations(digits) {
 
   getCombinations([], 0);
   return solutions;
-};
+}

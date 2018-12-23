@@ -27,4 +27,4 @@ function reverse(x) {
   }
 
   return reversed;
-};
+}

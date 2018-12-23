@@ -28,4 +28,4 @@ function maxArea(height) {
   }
 
   return maxArea;
-};
+}

@@ -30,4 +30,4 @@ function convert(s, numRows) {
   }
 
   return strs.reduce((total, current) => total + current); // join all the rows
-};
+}
