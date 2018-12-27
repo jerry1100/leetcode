@@ -17,8 +17,8 @@
  * @return {ListNode}
  */
 function partition(head, x) {
-  let leftHead = { next: null };
-  let rightHead = { next: null };
+  let leftHead = new ListNode(); // dummy node
+  let rightHead = new ListNode(); // dummy node
   let left = leftHead;
   let right = rightHead;
 
