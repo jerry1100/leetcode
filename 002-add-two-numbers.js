@@ -18,27 +18,22 @@
  * @return {ListNode}
  */
 function addTwoNumbers(l1, l2) {
+  let dummy = new ListNode();
+  let node = dummy;
   let carry = 0;
-  let firstNode;
-  let currentNode;
 
-  // While there are nodes to process
+  // While there is more to add
   while (l1 || l2 || carry) {
     const val1 = l1 ? l1.val : 0;
     const val2 = l2 ? l2.val : 0;
     const sum = val1 + val2 + carry;
     carry = sum > 9 ? 1 : 0;
 
-    // Add a node for the solution
-    if (!currentNode) {
-      firstNode = new ListNode(sum % 10);
-      currentNode = firstNode;
-    } else {
-      currentNode.next = new ListNode(sum % 10);
-      currentNode = currentNode.next;
-    }
+    // Add digit
+    node.next = new ListNode(sum % 10);
+    node = node.next;
 
-    // Move on to next nodes
+    // Update nodes
     if (l1) {
       l1 = l1.next;
     }
@@ -47,5 +42,5 @@ function addTwoNumbers(l1, l2) {
     }
   }
 
-  return firstNode;
+  return dummy.next;
 }
