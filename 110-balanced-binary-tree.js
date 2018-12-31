@@ -1,6 +1,6 @@
 /**
  * Time: O(n)
- * Space: O(1)
+ * Space: O(log n)
  * n - # of tree nodes
  */
 
