@@ -19,12 +19,12 @@ function powerfulIntegers(x, y, bound) {
     for (let valY = 1; valX + valY <= bound; valY *= y) {
       set.add(valX + valY);
 
-      if (y === 0 || y === 1) {
+      if (y === 1) {
         break;
       }
     }
 
-    if (x === 0 || x === 1) {
+    if (x === 1) {
       break;
     }
   }
