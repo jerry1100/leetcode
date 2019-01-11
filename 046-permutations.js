@@ -1,5 +1,5 @@
 /**
- * Time: O(n * n!)
+ * Time: O(n^2 * n!)
  * Space: O(n * n!)
  * n - # of nums
  */
