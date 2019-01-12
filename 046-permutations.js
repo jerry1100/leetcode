@@ -9,24 +9,29 @@
  * @return {number[][]}
  */
 function permute(nums) {
-  const permutations = [];
+  const solutions = [];
+  getPermutations(nums, solutions, []);
+  return solutions;
+}
 
-  const getPermutations = set => {
-    if (set.length === nums.length) {
-      return permutations.push(set.slice()); // copy array by value
+/**
+ * @param {number[]} nums
+ * @param {number[][]} solutions
+ * @param {number[]} current
+ * @return {void}
+ */
+function getPermutations(nums, solutions, current) {
+  if (current.length === nums.length) {
+    return solutions.push(current.slice());
+  }
+
+  for (let i = 0; i < nums.length; i++) {
+    if (current.includes(nums[i])) {
+      continue;
     }
 
-    for (let i = 0; i < nums.length; i++) {
-      if (set.includes(nums[i])) {
-        continue;
-      }
-
-      set.push(nums[i]);
-      getPermutations(set);
-      set.pop(nums[i]);
-    }
-  };
-
-  getPermutations([]);
-  return permutations;
+    current.push(nums[i]);
+    getPermutations(nums, solutions, current);
+    current.pop(nums[i]);
+  }
 }
