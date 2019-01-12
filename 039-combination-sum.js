@@ -11,25 +11,33 @@
  * @return {number[][]}
  */
 function combinationSum(candidates, target) {
-  const validSets = [];
+  const solutions = [];
+  findSets(candidates, solutions, [], target, 0);
+  return solutions;
+}
 
-  const findSets = (testSet, remainder, start) => {
-    if (!remainder) {
-      return validSets.push(testSet.slice()); // copy array by value
-    }
+/**
+ * 
+ * @param {number[]} candidates
+ * @param {number[][]} solutions
+ * @param {number[]} current
+ * @param {number} remainder
+ * @param {number} start
+ * @return {void}
+ */
+function findSets(candidates, solutions, current, remainder, start) {
+  if (!remainder) {
+    return solutions.push(current.slice());
+  }
 
-    if (remainder < 0) {
-      return;
-    }
+  if (remainder < 0) {
+    return;
+  }
 
-    // Track start to prevent going backwards, avoiding duplicates
-    for (let i = start; i < candidates.length; i++) {
-      testSet.push(candidates[i]);
-      findSets(testSet, remainder - candidates[i], i);
-      testSet.pop();
-    }
-  };
-
-  findSets([], target, 0);
-  return validSets;
+  // Track start to prevent going backwards, avoiding duplicates
+  for (let i = start; i < candidates.length; i++) {
+    current.push(candidates[i]);
+    findSets(candidates, solutions, current, remainder - candidates[i], i);
+    current.pop();
+  }
 }
