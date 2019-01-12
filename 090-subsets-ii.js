@@ -28,7 +28,7 @@ function findSubsets(nums, solutions, current, start) {
   solutions.push(current.slice());
 
   for (let i = start; i < nums.length; i++) {
-    if (i > start && nums[i] === nums[i - 1]) { // skip duplicates
+    if (i !== start && nums[i] === nums[i - 1]) { // skip duplicates
       continue;
     }
 
