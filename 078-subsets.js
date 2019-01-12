@@ -1,6 +1,6 @@
 /**
- * Time: O(2^n)
- * Space: O(2^n)
+ * Time: O(n * 2^n)
+ * Space: O(n * 2^n)
  * n - # of nums
  */
 
@@ -9,18 +9,24 @@
  * @return {number[][]}
  */
 function subsets(nums) {
-  const powerSet = [];
+  const solutions = [];
+  findSubsets(nums, solutions, [], 0);
+  return solutions;
+}
 
-  const getSubset = (set, start) => {
-    powerSet.push(set.slice()); // copy by value
 
-    for (let i = start; i < nums.length; i++) {
-      set.push(nums[i]);
-      getSubset(set, i + 1);
-      set.pop();
-    }
-  };
+/**
+ * @param {number[]} nums
+ * @param {number[]} solutions
+ * @param {number[]} current
+ * @param {number} start
+ */
+function findSubsets(nums, solutions, current, start) {
+  solutions.push(current.slice());
 
-  getSubset([], 0);
-  return powerSet;
+  for (let i = start; i < nums.length; i++) {
+    current.push(nums[i]);
+    findSubsets(nums, solutions, current, i + 1);
+    current.pop();
+  }
 }
