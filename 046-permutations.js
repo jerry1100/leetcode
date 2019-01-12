@@ -10,7 +10,7 @@
  */
 function permute(nums) {
   const solutions = [];
-  getPermutations(nums, solutions, [], new Set());
+  findPermutations(nums, solutions, [], new Set());
   return solutions;
 }
 
@@ -21,7 +21,7 @@ function permute(nums) {
  * @param {Set} included
  * @return {void}
  */
-function getPermutations(nums, solutions, current, included) {
+function findPermutations(nums, solutions, current, included) {
   if (current.length === nums.length) {
     return solutions.push(current.slice());
   }
@@ -33,7 +33,7 @@ function getPermutations(nums, solutions, current, included) {
 
     current.push(nums[i]);
     included.add(nums[i]);
-    getPermutations(nums, solutions, current, included);
+    findPermutations(nums, solutions, current, included);
     current.pop(nums[i]);
     included.delete(nums[i]);
   }
