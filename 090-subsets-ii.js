@@ -10,10 +10,8 @@
  */
 function subsetsWithDup(nums) {
   const solutions = [];
-
   nums.sort((a, b) => a - b);
   findSubsets(nums, solutions, [], 0);
-
   return solutions;
 }
 
