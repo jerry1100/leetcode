@@ -25,7 +25,7 @@ function searchInsert(nums, target) {
     }
   }
 
-  // Target is not in nums, with one num left: 
+  // Target is not in nums, with one num left:
   //   if target < num, then pos = left = right + 1
   //   if target > num, then pos = right + 1
   return right + 1;

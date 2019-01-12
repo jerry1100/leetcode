@@ -15,7 +15,7 @@ function isPalindrome(x) {
 
   const original = x;
   let reversed = 0;
-  
+
   // Reverse the digits
   while (x) {
     reversed = (reversed * 10) + (x % 10);

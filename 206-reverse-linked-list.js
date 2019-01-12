@@ -17,7 +17,7 @@
  */
 function reverseList(head) {
   let prev = null;
-  
+
   // Flip each node's next around
   while (head) {
     const next = head.next;

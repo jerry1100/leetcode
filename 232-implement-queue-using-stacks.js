@@ -13,7 +13,7 @@ function MyQueue() {
 }
 
 /**
- * Push element x to the back of queue. 
+ * Push element x to the back of queue.
  * @param {number} x
  * @return {void}
  */

@@ -17,7 +17,6 @@ function combinationSum(candidates, target) {
 }
 
 /**
- * 
  * @param {number[]} candidates
  * @param {number[][]} solutions
  * @param {number[]} current

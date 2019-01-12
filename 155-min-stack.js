@@ -11,7 +11,7 @@ function MinStack() {
   this.mins = [];
 }
 
-/** 
+/**
  * @param {number} x
  * @return {void}
  */

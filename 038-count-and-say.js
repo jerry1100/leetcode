@@ -17,7 +17,7 @@ function countAndSay(n) {
 }
 
 /**
- * @param {string} prevSequence 
+ * @param {string} prevSequence
  * @return {string}
  */
 function getSequence(prevSequence) {
