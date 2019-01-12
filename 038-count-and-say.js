@@ -18,6 +18,7 @@ function countAndSay(n) {
 
 /**
  * @param {string} prevSequence 
+ * @return {string}
  */
 function getSequence(prevSequence) {
   let solution = '';

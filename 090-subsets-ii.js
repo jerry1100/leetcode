@@ -22,6 +22,7 @@ function subsetsWithDup(nums) {
  * @param {number[]} solutions
  * @param {number[]} current
  * @param {number} start
+ * @return {void}
  */
 function findSubsets(nums, solutions, current, start) {
   solutions.push(current.slice());
