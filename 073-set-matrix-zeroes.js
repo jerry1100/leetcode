@@ -1,5 +1,5 @@
 /**
- * Time: O(n*m)
+ * Time: O(n * m)
  * Space: O(1)
  * n - number of rows in matrix
  * m - number of cols in matrix

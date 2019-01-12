@@ -1,5 +1,5 @@
 /**
- * Time: O(n*m)
+ * Time: O(n * m)
  * Space: O(1)
  * n - length of the haystack
  * m - length of the needle

@@ -1,5 +1,5 @@
 /**
- * Time: O(n*m)
+ * Time: O(n * m)
  * Space: O(1)
  * n - term #
  * m - longest possible sequence for a term
@@ -16,7 +16,9 @@ function countAndSay(n) {
   return getSequence(countAndSay(n - 1));
 }
 
-// Get current sequence from previous sequence
+/**
+ * @param {string} prevSequence 
+ */
 function getSequence(prevSequence) {
   let solution = '';
   for (let i = 0; i < prevSequence.length;) {
