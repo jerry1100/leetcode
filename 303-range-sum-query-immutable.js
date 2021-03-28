@@ -79,6 +79,9 @@
 
       Space complexity:
         savedSums[]: O(n)
+
+        Note: if we were allowed to modify the input nums, we could write the cumulative sum
+        array in its place, improving our space complexity to O(1).
      */
     NumArray.prototype.preCalc2 = function() {
       const savedSums = [];

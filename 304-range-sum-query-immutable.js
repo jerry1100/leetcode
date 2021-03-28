@@ -137,6 +137,9 @@
       Space complexity:
         Storing cumulative sums in 2d matrix: O(mn)
 
+        Note: if we were allowed to modify the input matrix, we could reuse it to store
+        our cumulative sum matrix, improving our space complexity to O(1).
+
       Note: after looking at other submissions, we can clean up precompute2() a bit by
       setting savedSums[row] = [] at the beginning of the row loop, instead of creating
       savedSumsForRow and then setting at after the for loop.
