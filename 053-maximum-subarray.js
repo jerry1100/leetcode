@@ -1,28 +1,26 @@
-/**
- * Time: O(n)
- * Space: O(1)
- * n - # of numbers
- */
+/*
+  Solution:
+    We need to find the maximum sum of a subarray within the given array.
+    The crux of the problem is that we need to determine where our subarray
+    begins, so we can start counting, while storing the maximum sum so far.
 
-/**
- * @param {number[]} nums
- * @return {number}
+    One insight is that if we're processing nums[i] and the sum so far is
+    negative, we can reset the sum to 0 as if we're not including the
+    previous elements.
+
+  Analysis:
+    Time: O(n)
+    Space: O(1)
  */
 function maxSubArray(nums) {
-  let sum = nums[0];
-  let max = nums[0];
+  let maxSoFar = -Infinity;
+  let subArraySum = 0;
 
-  for (let i = 1; i < nums.length; i++) {
-    if (sum < 0) {
-      sum = nums[i]; // reset and start at current number
-    } else {
-      sum += nums[i];
-    }
+  nums.forEach(num => {
+    subArraySum = Math.max(subArraySum, 0);
+    subArraySum += num;
+    maxSoFar = Math.max(subArraySum, maxSoFar);
+  });
 
-    if (sum > max) {
-      max = sum;
-    }
-  }
-
-  return max;
+  return maxSoFar;
 }
