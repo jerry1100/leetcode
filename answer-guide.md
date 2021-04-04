@@ -1,6 +1,7 @@
 # Answer Guide
 | Problem | Solution |
 | --- | --- |
+| 15. Given int array, implement `threeSum(nums)` to return all triplets that sum up to 0, no duplicate triplets and no reusing elements | <li>Solution: sort array then use two-pointer high & low approach to "walk" towards the middle so that the sum is 0. Save valid triplets and update the high & low pointers and the index so that we skip duplicates. O(n^2) time, O(log(n)) space (sort). |
 | 53. Given int array, implement `maxSubArray(nums)` to get the largest sum from a contiguous subarray in `nums` | <li>Solution: keep track of the maximum so far and the current sum. Whenever the sum is negative, reset the sum (starting new subarray). O(n) time, O(1) space. |
 | 88. Given sorted int arrays, merge them together as one sorted array | <li>Naive: merge then sort. O((n+m)log(n+m)) time, O(n) space.<li>Optimal: two pointer approach to write values in sorted order. O(n+m) time, O(n+m) space.<li>Optimal 2: two pointer approach to write values in reverse sorted order from back to front in `nums1` (it was given it had enough space). O(n+m) time, O(1) space. |
 | 100. Given roots of two binary trees, implement `isSameTree(p, q)` to check if they are equal in shape | <li>Compare the current nodes, then recursively compare the nodes' left and right children. O(n) time, O(log(n)) space. |
