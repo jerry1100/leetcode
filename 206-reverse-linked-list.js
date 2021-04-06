@@ -1,30 +1,33 @@
-/**
- * Time: O(n)
- * Space: O(1)
- * n - # of nodes
- */
+/*
+  Solution:
+    Go through each node and set the current node's next pointer to the previous node.
 
-/**
- * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
- */
-/**
- * @param {ListNode} head
- * @return {ListNode}
- */
-function reverseList(head) {
-  let prev = null;
+  Algorithm:
+    prev = null
+    curr = head
 
-  // Flip each node's next around
-  while (head) {
-    const next = head.next;
-    head.next = prev;
-    prev = head;
-    head = next;
-  }
+    while curr != null
+      next = curr.next
+      curr.next = prev
+      prev = curr
+      curr = next
 
-  return prev;
-}
+    return prev
+
+  Analysis:
+    Time: O(n)
+    Space: O(1)
+ */
+    function reverseList(head) {
+      let prev = null;
+      let curr = head;
+
+      while (curr !== null) {
+        const next = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = next;
+      }
+
+      return prev;
+    }
