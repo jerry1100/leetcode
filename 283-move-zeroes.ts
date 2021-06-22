@@ -1,3 +1,7 @@
+// N: length of nums
+// Time: O(N)
+// Space: O(1)
+
 /**
  Do not return anything, modify nums in-place instead.
  */
