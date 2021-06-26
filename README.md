@@ -1,4 +1,6 @@
-# Answer Guide
+# leetcode
+
+## Answer Guide
 | Problem | Solution |
 | --- | --- |
 | 15. Given int array, implement `threeSum(nums)` to return all triplets that sum up to 0, no duplicate triplets and no reusing elements | <li>Solution: sort array then use two-pointer high & low approach to "walk" towards the middle so that the sum is 0. Save valid triplets and update the high & low pointers and the index so that we skip duplicates. O(n^2) time, O(log(n)) space (sort). |
