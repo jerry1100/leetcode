@@ -4,10 +4,10 @@
 // Space: O(N)
 
 function combinationSum4(nums: number[], target: number): number {
-    const memo = new Array(target + 1).fill(0);
+    const dp = new Array<number>(target + 1).fill(0);
 
     // One combination that adds up to 0: empty set
-    memo[0] = 1;
+    dp[0] = 1;
 
     // numCombos[i] = numCombos[i - num] for all num <= i
     // E.g. the number of ways we can make 10 with [2, 5] is the sum of the
@@ -15,10 +15,10 @@ function combinationSum4(nums: number[], target: number): number {
     for (let i = 1; i <= target; i++) {
         for (const num of nums) {
             if (num <= i) {
-                memo[i] += memo[i - num];
+                dp[i] += dp[i - num];
             }
         }
     }
 
-    return memo[target];
+    return dp[target];
 }
