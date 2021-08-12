@@ -17,23 +17,20 @@
  */
 
 function kthSmallest(root: TreeNode | null, k: number): number {
-    const stack: (TreeNode | null)[] = [];
+    const stack: TreeNode[] = [];
     let node = root;
     let count = 0;
 
     while (node || stack.length) {
-        // Push everything to the left of node
+        // Process left
         while (node) {
             stack.push(node);
             node = node.left;
         }
 
-        // Now that there's nothing to the left of node,
-        // we can start processing the current and right side
-        node = stack.pop();
-
         // Process current. If this is the kth node we've processed,
         // then this is the answer.
+        node = stack.pop();
         count++;
         if (count === k) {
             return node.val;
