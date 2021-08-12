@@ -1,6 +1,6 @@
-// N: number of nodes
+// N: number of nodes in tree
 // Time: O(N)
-// Space: O(N) due to stack frames
+// Space: O(N)
 
 /**
  * Definition for a binary tree node.
@@ -16,32 +16,25 @@
  * }
  */
 
-function levelOrder(root: TreeNode | null): number[][] {
-    const nodesInLevel: number[][] = [];
+function inorderTraversal(root: TreeNode | null): number[] {
+    const stack: TreeNode[] = [];
+    const res: number[] = [];
+    let node = root;
 
-    dfs(root, 0, nodesInLevel);
+    while (node || stack.length) {
+        // Process left: equivalent to dfs(node.left)
+        while (node) {
+            stack.push(node);
+            node = node.left;
+        }
 
-    return nodesInLevel;
-}
+        // Process current: equivalent to just after returning from dfs(node.left)
+        node = stack.pop();
+        res.push(node.val);
 
-function dfs(
-    node: TreeNode | null,
-    level: number,
-    nodesInLevel: number[][]
-): void {
-    if (!node) {
-        return;
+        // Process right
+        node = node.right;
     }
 
-    // Start new level
-    if (!nodesInLevel[level]) {
-        nodesInLevel[level] = [];
-    }
-
-    // Save node in level
-    nodesInLevel[level].push(node.val);
-
-    // Process children
-    dfs(node.left, level + 1, nodesInLevel);
-    dfs(node.right, level + 1, nodesInLevel);
+    return res;
 }
