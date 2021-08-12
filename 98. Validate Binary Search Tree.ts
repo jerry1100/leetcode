@@ -29,14 +29,13 @@ function isValidSubtree(
         return true;
     }
 
-    // Current node is out of bounds
-    if (node.val <= min || node.val >= max) {
+    if (node.val < min || node.val > max) {
         return false;
     }
 
-    // Current val is max for left child and min for right child
+    // Left subtree < node.val < right subtree
     return (
-        isValidSubtree(node.left, min, node.val) &&
-        isValidSubtree(node.right, node.val, max)
+        isValidSubtree(node.left, min, node.val - 1) &&
+        isValidSubtree(node.right, node.val + 1, max)
     );
 }
