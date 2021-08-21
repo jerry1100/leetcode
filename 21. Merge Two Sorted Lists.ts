@@ -1,3 +1,8 @@
+// N: length of list1
+// M: length of list2
+// Time: O(N+M)
+// Space: O(1)
+
 /**
  * Definition for singly-linked list.
  * class ListNode {
@@ -10,26 +15,29 @@
  * }
  */
 
- function mergeTwoLists(l1: ListNode | null, l2: ListNode | null): ListNode | null {
-    const preHead = new ListNode();
-    let curr = preHead;
-    let p1 = l1;
-    let p2 = l2;
+function mergeTwoLists(
+    l1: ListNode | null,
+    l2: ListNode | null
+): ListNode | null {
+    const dummyHead = new ListNode();
+    let curr = dummyHead;
+    let node1 = l1;
+    let node2 = l2;
 
-    while (p1 && p2) {
-        if (p1.val < p2.val) {
-            curr.next = p1;
-            p1 = p1.next;
+    while (node1 && node2) {
+        if (node1.val < node2.val) {
+            curr.next = node1;
+            node1 = node1.next;
         } else {
-            curr.next = p2;
-            p2 = p2.next;
+            curr.next = node2;
+            node2 = node2.next;
         }
 
         curr = curr.next;
     }
-    
-    // Connect potential trailing nodes
-    curr.next = p1 || p2;
-    
-    return preHead.next;
+
+    // Connect remaining nodes, if any
+    curr.next = node1 ?? node2;
+
+    return dummyHead.next;
 }
