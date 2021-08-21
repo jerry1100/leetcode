@@ -17,6 +17,6 @@ function fizzBuzz(n: number): string[] {
 
         res.push(str || i.toString());
     }
-    
+
     return res;
-};
+}

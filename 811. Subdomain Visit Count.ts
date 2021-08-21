@@ -12,7 +12,7 @@ function subdomainVisits(cpdomains: string[]): string[] {
         do {
             const currCount = counts.get(subDomain) ?? 0;
             counts.set(subDomain, currCount + count);
-            
+
             // Remove up to next '.'
             subDomain = subDomain.replace(/[^.]*\.?/, "");
         } while (subDomain);
@@ -20,9 +20,8 @@ function subdomainVisits(cpdomains: string[]): string[] {
 
     const res = [];
     counts.forEach((count: number, domain: string) => {
-       res.push(`${count} ${domain}`); 
+        res.push(`${count} ${domain}`);
     });
-    
-    return res;
-};
 
+    return res;
+}

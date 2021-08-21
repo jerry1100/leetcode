@@ -9,7 +9,7 @@ function removeDuplicates(nums: number[]): number {
     if (nums.length < 2) {
         return nums.length;
     }
-    
+
     let iValid = 1; // everything left of this is valid
     let iTest = 1;
 
@@ -21,20 +21,20 @@ function removeDuplicates(nums: number[]): number {
 
             continue;
         }
-        
+
         // Find something bigger than the last valid number
         if (nums[iTest] <= nums[iValid - 1]) {
             iTest += 1;
 
             continue;
         }
-        
+
         // Swap them
         swapIndices(nums, iTest, iValid);
     }
-    
+
     return iValid;
-};
+}
 
 function swapIndices(nums: number[], i1: number, i2: number): void {
     const tmp = nums[i1];

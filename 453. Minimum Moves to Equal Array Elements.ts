@@ -5,14 +5,14 @@
 function minMoves(nums: number[]): number {
     let sum = 0;
     let min = Infinity;
-    
+
     for (const num of nums) {
         sum += num;
         min = Math.min(min, num);
     }
-    
+
     return sum - nums.length * min;
-};
+}
 
 /*
 Relies on the following principles:

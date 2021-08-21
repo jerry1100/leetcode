@@ -9,15 +9,19 @@ function isAlienSorted(words: string[], order: string): boolean {
             return false;
         }
     }
-    
-    return true;
-};
 
-function isSorted(first: string, second: string, positions: Map<string, number>): boolean {
+    return true;
+}
+
+function isSorted(
+    first: string,
+    second: string,
+    positions: Map<string, number>
+): boolean {
     for (let i = 0; i < first.length; i++) {
         const firstPos = positions.get(first[i]);
         const secondPos = positions.get(second[i]);
-        
+
         if (firstPos < secondPos) {
             return true;
         }

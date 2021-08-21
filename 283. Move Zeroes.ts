@@ -21,7 +21,7 @@ function moveZeroes(nums: number[]): void {
             iLastZero++;
         }
     }
-};
+}
 
 function swap(nums: number[], i1: number, i2: number): void {
     const tmp = nums[i1];

@@ -29,14 +29,17 @@ function closestValue(root: TreeNode | null, target: number): number {
             closest = node.val;
         }
 
-        if (node.val > target) { // overshot, go left
+        if (node.val > target) {
+            // overshot, go left
             node = node.left;
-        } else if (node.val < target) { // undershot, go right
+        } else if (node.val < target) {
+            // undershot, go right
             node = node.right;
-        } else { // they're equal
+        } else {
+            // they're equal
             break;
         }
     }
-    
+
     return closest;
-};
+}

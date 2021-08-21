@@ -5,7 +5,7 @@
 
 function firstUniqChar(s: string): number {
     const charCounts: { [char: string]: number } = {};
-    
+
     for (const char of s) {
         charCounts[char] = (charCounts[char] ?? 0) + 1;
     }
@@ -15,6 +15,6 @@ function firstUniqChar(s: string): number {
             return i;
         }
     }
-    
+
     return -1;
-};
+}
