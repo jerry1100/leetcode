@@ -1,4 +1,4 @@
-// N: number of meetings
+// N: number of intervals
 // Time: O(N*log(N))
 // Space: O(N)
 
@@ -10,19 +10,19 @@ function minMeetingRooms(intervals: number[][]): number {
         .map((interval) => interval[1])
         .sort((a, b) => a - b);
 
-    let iEnd = 0;
-    let numRooms = 0;
+    let lastEndIndex = 0;
+    let numRoomsUsed = 0;
 
     for (const startTime of startTimes) {
-        // Meeting ended, free up a room
-        if (endTimes[iEnd] <= startTime) {
-            iEnd++;
-            numRooms--;
+        // A previous meeting has ended in time for the current meeting. We can reuse
+        // that room instead of requiring another room.
+        if (endTimes[lastEndIndex] <= startTime) {
+            lastEndIndex++;
+            continue;
         }
 
-        // Meeting started, take up a room
-        numRooms++;
+        numRoomsUsed++;
     }
 
-    return numRooms;
+    return numRoomsUsed;
 }
