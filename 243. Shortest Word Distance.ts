@@ -7,8 +7,8 @@ function shortestDistance(
     word1: string,
     word2: string
 ): number {
-    let i1: number | undefined;
-    let i2: number | undefined;
+    let i1: number;
+    let i2: number;
     let min = wordsDict.length;
 
     for (let i = 0; i < wordsDict.length && min > 1; i++) {

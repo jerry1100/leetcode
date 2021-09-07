@@ -11,7 +11,7 @@
 // more +1s than -1s since the majority element is the majority. It can also be
 // used to determine voting results.
 function majorityElement(nums: number[]): number {
-    let candidate: number | undefined;
+    let candidate: number;
     let count = 0;
 
     for (const num of nums) {
